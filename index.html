@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Navigatie</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/room.js"></script>
+</head>
+<body>
+<div>
+    <a-scene class="test" embedded>
+        <a-assets>
+            <!-- Images. -->
+            <img id="h1.1" src=./image/h1.1.jpg alt="alt">
+            <img id="h1.2" src=./image/h1.2.jpg alt="alt">
+            <img id="h1.3" src=./image/h1.3.jpg alt="alt">
+            <img id="h1.4" src=./image/h1.4.jpg alt="alt">
+            <img id="h2.1" src=./image/h2.1.jpg alt="alt">
+            <img id="h2.2" src=./image/h2.2.jpg alt="alt">
+            <img id="h2.3" src=./image/h2.3.jpg alt="alt">
+            <img id="h3.1" src=./image/h3.1.jpg alt="alt">
+            <img id="h3.2" src=./image/h3.2.jpg alt="alt">
+            <img id="h3.3" src=./image/h3.3.jpg alt="alt">
+            <img id="h4.1" src=./image/h4.1.jpg alt="alt">
+            <img id="h4.2" src=./image/h4.2.jpg alt="alt">
+            <img id="h4.3" src=./image/h4.3.jpg alt="alt">
+            <img id="h5.0" src=./image/h5.0.jpg alt="alt">
+            <img id="h5.1" src=./image/h5.1.jpg alt="alt">
+            <img id="h5.2" src=./image/h5.2.jpg alt="alt">
+            <img id="h6.1" src=./image/h6.1.jpg alt="alt">
+            <img id="h6.2" src=./image/h6.2.jpg alt="alt">
+            <img id="forum" src=./image/forum.jpg alt="alt">
+        </a-assets>
+
+        <!-- 360-degree image. -->
+        <a-sky id="image-360" radius="10" src=#h1.1></a-sky>
+    </a-scene>
+</div>
+<label for="menu">Kies een locatie:</label>
+<select id="menu">
+    <option class="hoofd">Hantal 1</option>
+    <option value="h1.1">1</option>
+    <option value="h1.2">2</option>
+    <option value="h1.3">3</option>
+    <option value="h1.4">4</option>
+    <option class="hoofd">Hantal 2</option>
+    <option value="h2.1">1</option>
+    <option value="h2.2">2</option>
+    <option value="h2.3">3</option>
+    <option class="hoofd">Hantal 3</option>
+    <option value="h3.1">1</option>
+    <option value="h3.2">2</option>
+    <option value="h3.3">3</option>
+    <option class="hoofd">Hantal 4</option>
+    <option value="h4.1">1</option>
+    <option value="h4.2">2</option>
+    <option value="h4.3">3</option>
+    <option class="hoofd">Hantal 5</option>
+    <option value="h5.0">1</option>
+    <option value="h5.1">2</option>
+    <option value="h5.2">3</option>
+    <option class="hoofd">Hantal 6</option>
+    <option value="h6.1">1</option>
+    <option value="h6.2">2</option>
+    <option class="hoofd">Forum</option>
+    <option value="forum">1</option>
+</select>
+<label for="vanButton">Van:</label>
+<select id="vanButton">
+    <option class="hoofd">Hantal 1</option>
+    <option value="h1.1">1</option>
+    <option value="h1.2">2</option>
+    <option value="h1.3">3</option>
+    <option value="h1.4">4</option>
+    <option class="hoofd">Hantal 2</option>
+    <option value="h2.1">1</option>
+    <option value="h2.2">2</option>
+    <option value="h2.3">3</option>
+    <option class="hoofd">Hantal 3</option>
+    <option value="h3.1">1</option>
+    <option value="h3.2">2</option>
+    <option value="h3.3">3</option>
+    <option class="hoofd">Hantal 4</option>
+    <option value="h4.1">1</option>
+    <option value="h4.2">2</option>
+    <option value="h4.3">3</option>
+    <option class="hoofd">Hantal 5</option>
+    <option value="h5.0">1</option>
+    <option value="h5.1">2</option>
+    <option value="h5.2">3</option>
+    <option class="hoofd">Hantal 6</option>
+    <option value="h6.1">1</option>
+    <option value="h6.2">2</option>
+    <option class="hoofd">Forum</option>
+    <option value="forum">1</option>
+</select>
+<label for="naarButton">Naar:</label>
+<select id="naarButton">
+    <option class="hoofd">Hantal 1</option>
+    <option value="h1.1">1</option>
+    <option value="h1.2">2</option>
+    <option value="h1.3">3</option>
+    <option value="h1.4">4</option>
+    <option class="hoofd">Hantal 2</option>
+    <option value="h2.1">1</option>
+    <option value="h2.2">2</option>
+    <option value="h2.3">3</option>
+    <option class="hoofd">Hantal 3</option>
+    <option value="h3.1">1</option>
+    <option value="h3.2">2</option>
+    <option value="h3.3">3</option>
+    <option class="hoofd">Hantal 4</option>
+    <option value="h4.1">1</option>
+    <option value="h4.2">2</option>
+    <option value="h4.3">3</option>
+    <option class="hoofd">Hantal 5</option>
+    <option value="h5.0">1</option>
+    <option value="h5.1">2</option>
+    <option value="h5.2">3</option>
+    <option class="hoofd">Hantal 6</option>
+    <option value="h6.1">1</option>
+    <option value="h6.2">2</option>
+    <option class="hoofd">Forum</option>
+    <option value="forum">1</option>
+</select>
+<input type="button" id="startButton" class="btn btn-primary" value="Start Pad">
+<input type="button" id="vorigeButton" value="<">
+<input type="button" id="volgendeButton" value=">">
+<script type="text/javascript" charset="utf-8" src="scripts/script.js"></script>
+</body>
+</html>

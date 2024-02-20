@@ -1,0 +1,17 @@
+.test {
+    height: 650px;
+    width: 1000px;
+    position: center;
+}
+
+.hoofd {
+    font-weight: bold;
+}
+
+body {
+    margin-left: 200px;
+}
+
+#menu {
+    margin-top: 20px;
+}
