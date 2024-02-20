@@ -12,7 +12,6 @@
 <body>
 <div>
     <a-scene class="test">
-        <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
         <a-assets>
             <!-- Images. -->
             <img id="h1.1" src=./image/h1.1.jpg alt="alt">
@@ -38,6 +37,7 @@
 
         <!-- 360-degree image. -->
         <a-sky id="image-360" radius="10" src=#h1.1></a-sky>
+        <a-camera look-controls="reverseMouseDrag: true" />
     </a-scene>
 </div>
 <div class="bovenop">
