@@ -82,12 +82,12 @@ function findShortestPath(start, end) {
     while (queue.length > 0) {
         const [currentRoom, path] = queue.shift();
 
-        if (currentRoom === end) {
-            return path; // Path found
-        }
-
         if (!visited.has(currentRoom)) {
             visited.add(currentRoom);
+
+            if (currentRoom === end) {
+                return [...path, currentRoom.name]; // Include the end room in the path
+            }
 
             for (const exit of currentRoom.exits.values()) {
                 if (!visited.has(exit)) {

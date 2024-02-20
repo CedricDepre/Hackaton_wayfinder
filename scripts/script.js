@@ -1,10 +1,10 @@
+let pad = ["h1.1", "h2.2","h3.3", "forum"]
 const setup = () => {
     let menuChoice = document.getElementById("menu").value;
 
     let btnstart = document.getElementById("startButton")
     btnstart.addEventListener("click", startPathFinding)
 
-    let pad = ["h1.1", "h2.2","h3.3", "forum"];
     let index = 0;
 
     const updateMenu = () => {
@@ -41,22 +41,19 @@ const setup = () => {
     vorigeButton.addEventListener("click", padVorige);
 }
 const startPathFinding = () => {
-    console.log("hallo")
     let start = document.getElementById("vanButton").value
     let eind = document.getElementById("naarButton").value
-
-    console.log(start)
-    console.log(eind)
 
     const startRoom = Room.fromString(start)
     const eindRoom = Room.fromString(eind)
 
-    console.log(startRoom)
-    console.log(eindRoom)
 
     const path = findShortestPath(startRoom,eindRoom)
-
-    console.log(path)
+    let ids = []
+    for (val of path){
+        ids.push(val.replace("_",".").toLowerCase())
+    }
+    pad = ids
 }
 
 window.addEventListener("load", setup);
