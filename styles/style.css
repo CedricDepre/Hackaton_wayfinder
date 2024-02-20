@@ -15,3 +15,9 @@ body {
 #menu {
     margin-top: 20px;
 }
+.bovenop{
+    position: absolute;
+    left: auto;
+    right: auto;
+
+}
