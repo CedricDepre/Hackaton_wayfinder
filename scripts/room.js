@@ -75,46 +75,27 @@ Room.setExits(Room.H6_1, Room.FORUM, Room.H6_2);
 Room.setExits(Room.H6_2, Room.H2_1, Room.H6_1);
 
 
-const findShortestPath = (start, end) => {
-    const queue = [start]
-    const path = new Map()
-    const visited = [start]
+function findShortestPath(start, end) {
+    const visited = new Set();
+    const queue = [[start, []]]; // Queue contains [currentRoom, path]
 
     while (queue.length > 0) {
-        const currentRoom = queue[queue.length - 1]
+        const [currentRoom, path] = queue.shift();
 
         if (currentRoom === end) {
-            console.log("queue", queue)
-            return CreateArrayFromQueue(queue)
+            return path; // Path found
         }
 
-        allExits = getAllExits(currentRoom)
+        if (!visited.has(currentRoom)) {
+            visited.add(currentRoom);
 
-        for (neighbour of allExits) {
-            neighbour = neighbour[1]
-            if (!visited.includes(neighbour)) {
-                queue.push(neighbour)
-                visited.push(neighbour)
-                path[neighbour] = currentRoom
+            for (const exit of currentRoom.exits.values()) {
+                if (!visited.has(exit)) {
+                    queue.push([exit, [...path, currentRoom.name]]);
+                }
             }
         }
     }
-}
 
-const CreateArrayFromQueue = (queue) => {
-    arr = []
-    for (obj of queue) {
-        arr.push(obj.name)
-    }
-    return arr
+    return null; // No path found
 }
-const getAllExits = (room) => {
-    if (!room) {
-        return null
-    }
-    if (!room.exits) {
-        return null
-    }
-
-    return Array.from(room.exits.entries());
-};
