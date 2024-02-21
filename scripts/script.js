@@ -1,26 +1,33 @@
 let pad = []
+let locatieOption = []
+let pad = []
 const setup = () => {
-    let menuChoice = document.getElementById("menu").value;
+    let menuChoice = document.getElementById("vanButton").value;
 
     let btnstart = document.getElementById("startButton")
     btnstart.addEventListener("click", startPathFinding)
 
+    let locatieSpan = document.getElementById("locatie")
+
     let index = 0;
 
-    let progress = document.getElementById("progress")
-    progress.max = pad.length - 1
-
-
-
+    vanButton = document.getElementById("vanButton");
+    locatieSpan.textContent = vanButton.options[vanButton.selectedIndex].textContent
 
     const updateMenu = () => {
-        menuChoice = document.getElementById("menu").value;
+        menuChoice = document.getElementById("vanButton").value;
         fotoKader.setAttribute("src","#" + menuChoice)
+
+        vanButton = document.getElementById("vanButton");
+        locatieOption = vanButton.options[vanButton.selectedIndex]
+        locatieSpan.textContent = locatieOption.textContent
     }
 
     const padStart = () => {
         index = 0
         fotoKader.setAttribute("src","#" + pad[0])
+        locatieOption = document.querySelector(`option[value='${pad[index]}']`)
+        locatieSpan.textContent = locatieOption.textContent
     }
 
     const padVolgende = () => {
@@ -28,7 +35,8 @@ const setup = () => {
             index++;
         }
         fotoKader.setAttribute("src","#" + pad[index])
-        progress.value = index
+        locatieOption = document.querySelector(`option[value='${pad[index]}']`)
+        locatieSpan.textContent = locatieOption.textContent
     }
 
     const padVorige = () => {
@@ -36,14 +44,15 @@ const setup = () => {
             index--;
         }
         fotoKader.setAttribute("src","#" + pad[index])
-        progress.value = index
+        locatieOption = document.querySelector(`option[value='${pad[index]}']`)
+        locatieSpan.textContent = locatieOption.textContent
     }
 
     let volgendeButton = document.getElementById("volgendeButton");
     let vorigeButton = document.getElementById("vorigeButton");
     let startButton = document.getElementById("startButton");
     let fotoKader = document.getElementById("image-360");
-    let menuveld = document.getElementById("menu");
+    let menuveld = document.getElementById("vanButton");
     menuveld.addEventListener("change", updateMenu);
     startButton.addEventListener("click", padStart);
     volgendeButton.addEventListener("click", padVolgende);
@@ -64,8 +73,6 @@ const startPathFinding = () => {
     }
     pad = ids
 }
-
-window.addEventListener("load", setup);
 
 AFRAME.registerComponent('zoom-controls', {
     schema:{
@@ -89,3 +96,5 @@ AFRAME.registerComponent('zoom-controls', {
         });
     }
 });
+
+window.addEventListener("load", setup);

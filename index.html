@@ -41,8 +41,8 @@
     </a-scene>
 </div>
 <div class="bovenop">
-    <label for="menu">Ga naar</label>
-    <select id="menu">
+    <label for="vanButton">Van:</label>
+    <select id="vanButton">
         <option class="hoofd" disabled>Hantal 1</option>
         <option value="h1.1" selected>H1 ingang links</option>
         <option value="h1.2">H1 ingang rechts</option>
@@ -52,11 +52,11 @@
         <option value="h2.1">H2 kant H6</option>
         <option value="h2.2">H2 midden</option>
         <option value="h2.3">H2 kant H4</option>
-        <option class="hoofd" disabled>Hantal 3</option>
+        <option class="hoofd"disabled>Hantal 3</option>
         <option value="h3.1">H3 begin</option>
         <option value="h3.2">H3 eind</option>
         <option value="h3.3">H3 linkerkant</option>
-        <option class="hoofd" disabled>Hantal 4</option>
+        <option class="hoofd"disabled>Hantal 4</option>
         <option value="h4.1">H4 ingang</option>
         <option value="h4.2">H4 midden</option>
         <option value="h4.3">H4 kant deli</option>
@@ -67,63 +67,33 @@
         <option class="hoofd" disabled>Hantal 6</option>
         <option value="h6.1">H6 gang naar forum</option>
         <option value="h6.2">H6 tweede verdiep</option>
-        <option class="hoofd" disabled>Forum</option>
-        <option value="forum">Forum midden</option>
-    </select>
-    <br>
-    <label for="vanButton">Van:</label>
-    <select id="vanButton">
-        <option class="hoofd">Hantal 1</option>
-        <option value="h1.1">H1 ingang links</option>
-        <option value="h1.2">H1 ingang rechts</option>
-        <option value="h1.3">H1 midden</option>
-        <option value="h1.4">H1 eind</option>
-        <option class="hoofd">Hantal 2</option>
-        <option value="h2.1">H2 kant H6</option>
-        <option value="h2.2">H2 midden</option>
-        <option value="h2.3">H2 kant H4</option>
-        <option class="hoofd">Hantal 3</option>
-        <option value="h3.1">H3 begin</option>
-        <option value="h3.2">H3 eind</option>
-        <option value="h3.3">H3 linkerkant</option>
-        <option class="hoofd">Hantal 4</option>
-        <option value="h4.1">H4 ingang</option>
-        <option value="h4.2">H4 midden</option>
-        <option value="h4.3">H4 kant deli</option>
-        <option class="hoofd">Hantal 5</option>
-        <option value="h5.0">H5 gelijkvloers</option>
-        <option value="h5.1">H5 tweede verdiep</option>
-        <option value="h5.2">H5 derde verdiep</option>
-        <option class="hoofd">Hantal 6</option>
-        <option value="h6.1">H6 gang naar forum</option>
-        <option value="h6.2">H6 tweede verdiep</option>
         <option class="hoofd">Forum</option>
         <option value="forum">Forum midden</option>
     </select>
     <label for="naarButton">Naar:</label>
     <select id="naarButton">
-        <option class="hoofd">Hantal 1</option>
-        <option value="h1.1">H1 ingang links</option>
+        <option class="hoofd" disabled>Hantal 1</option>
+        <option value="h1.1" selected>H1 ingang links</option>
         <option value="h1.2">H1 ingang rechts</option>
         <option value="h1.3">H1 midden</option>
         <option value="h1.4">H1 eind</option>
-        <option class="hoofd">Hantal 2</option>
+        <option class="hoofd" disabled>Hantal 2</option>
         <option value="h2.1">H2 kant H6</option>
         <option value="h2.2">H2 midden</option>
         <option value="h2.3">H2 kant H4</option>
-        <option class="hoofd">Hantal 3</option>
+        <option class="hoofd"disabled>Hantal 3</option>
         <option value="h3.1">H3 begin</option>
         <option value="h3.2">H3 eind</option>
         <option value="h3.3">H3 linkerkant</option>
-        <option class="hoofd">Hantal 4</option>
+        <option class="hoofd"disabled>Hantal 4</option>
         <option value="h4.1">H4 ingang</option>
         <option value="h4.2">H4 midden</option>
         <option value="h4.3">H4 kant deli</option>
-        <option class="hoofd">Hantal 5</option>
+        <option class="hoofd" disabled>Hantal 5</option>
         <option value="h5.0">H5 gelijkvloers</option>
         <option value="h5.1">H5 tweede verdiep</option>
         <option value="h5.2">H5 derde verdiep</option>
-        <option class="hoofd">Hantal 6</option>
+        <option class="hoofd" disabled>Hantal 6</option>
         <option value="h6.1">H6 gang naar forum</option>
         <option value="h6.2">H6 tweede verdiep</option>
         <option class="hoofd">Forum</option>
@@ -132,7 +102,7 @@
     <input type="button" id="startButton" class="btn btn-primary" value="Start Pad">
     <input type="button" id="vorigeButton" value="<">
     <input type="button" id="volgendeButton" value=">">
-    <progress max="" value="" id="progress"></progress>
+    <p>u bevindt zich hier: <span id="locatie"></span></p>
 </div>
 
 <script type="text/javascript" charset="utf-8" src="scripts/script.js"></script>
