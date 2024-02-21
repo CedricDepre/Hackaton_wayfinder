@@ -37,8 +37,10 @@ input[type=button], select {
     background-color: #007bff;
     color: #f3f1f1;
     border: none;
+    position: relative;
+    bottom: auto;
 }
 
-label {
+label, span, p {
     color: #f3f1f1;
 }

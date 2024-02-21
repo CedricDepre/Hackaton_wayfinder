@@ -3,9 +3,6 @@ let locatieOption = []
 const setup = () => {
     let menuChoice = document.getElementById("vanButton").value;
 
-    let btnstart = document.getElementById("startButton")
-    btnstart.addEventListener("click", startPathFinding)
-
     let locatieSpan = document.getElementById("locatie")
 
     let index = 0;
@@ -53,9 +50,15 @@ const setup = () => {
     let fotoKader = document.getElementById("image-360");
     let menuveld = document.getElementById("vanButton");
     menuveld.addEventListener("change", updateMenu);
-    startButton.addEventListener("click", padStart);
+
+    bindAjax(padStart)
+    //startButton.addEventListener("click", padStart);
+    
     volgendeButton.addEventListener("click", padVolgende);
     vorigeButton.addEventListener("click", padVorige);
+
+    /* Removes the need for a start button */
+    bindAjax(startPathFinding)
 }
 const startPathFinding = () => {
     let start = document.getElementById("vanButton").value
@@ -95,5 +98,11 @@ AFRAME.registerComponent('zoom-controls', {
         });
     }
 });
+
+const bindAjax = (onChange) => {
+    for (elem of ["vanButton", "naarButton"]) {
+        $(`#${elem}`).on("change", onChange)
+    }
+}
 
 window.addEventListener("load", setup);
