@@ -1,6 +1,5 @@
 let pad = []
 let locatieOption = []
-let pad = []
 const setup = () => {
     let menuChoice = document.getElementById("vanButton").value;
 
