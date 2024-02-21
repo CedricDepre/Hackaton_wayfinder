@@ -1,4 +1,4 @@
-let pad = ["h1.1", "h2.2","h3.3", "forum"]
+let pad = []
 const setup = () => {
     let menuChoice = document.getElementById("menu").value;
 
