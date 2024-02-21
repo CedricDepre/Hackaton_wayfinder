@@ -25,7 +25,7 @@ const setup = () => {
     const padStart = () => {
         index = 0
         fotoKader.setAttribute("src","#" + pad[0])
-        setArrow(pad[0],pad[1])
+        //setArrow(pad[0],pad[1])
 
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
         locatieSpan.textContent = locatieOption.textContent
