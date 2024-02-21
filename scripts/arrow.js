@@ -293,6 +293,7 @@ function getArrowDetails(from,to){
 
 
     name = from + ">" + to;
+    console.log(name)
     return arrowData.find(arrow => arrow.name === name).points;
 
 }
