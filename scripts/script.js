@@ -25,7 +25,8 @@ const setup = () => {
     const padStart = () => {
         index = 0
         fotoKader.setAttribute("src","#" + pad[0])
-        //setArrow(pad[0],pad[1])
+
+        setArrow(pad[0],pad[1])
 
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
         locatieSpan.textContent = locatieOption.textContent
@@ -35,7 +36,7 @@ const setup = () => {
         if (index !== pad.length -1) {
             index++;
             if(index !== pad.lenght -2){
-                //setArrow(pad[index],pad[index+1])
+                setArrow(pad[index],pad[index+1])
             }
 
         }else{
@@ -49,7 +50,7 @@ const setup = () => {
     const padVorige = () => {
         if (index !== 0) {
             index--;
-            //setArrow(pad[index],pad[index+1])
+            setArrow(pad[index],pad[index+1])
         }
         fotoKader.setAttribute("src","#" + pad[index])
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
@@ -68,6 +69,7 @@ const setup = () => {
         var arrowDetails = getArrowDetails(loc0,loc1)
 
         var pijl = document.getElementById('pijl');
+        pijl.setAttribute('visible', 'true');
 
 
 // De eerste drie waardes instellen als positie
