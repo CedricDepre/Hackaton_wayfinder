@@ -65,6 +65,8 @@ const startPathFinding = () => {
     pad = ids
 }
 
+window.addEventListener("load", setup);
+
 AFRAME.registerComponent('zoom-controls', {
     schema:{
         min:{type:"number", default: 20},
@@ -87,5 +89,3 @@ AFRAME.registerComponent('zoom-controls', {
         });
     }
 });
-
-window.addEventListener("load", setup);
