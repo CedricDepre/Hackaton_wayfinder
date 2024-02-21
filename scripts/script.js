@@ -35,9 +35,8 @@ const setup = () => {
     const padVolgende = () => {
         if (index !== pad.length -1) {
             index++;
-            if(index !== pad.lenght -2){
-                setArrow(pad[index],pad[index+1])
-            }
+            setArrow(pad[index],pad[index+1])
+
 
         }else{
             hideArrow();
@@ -59,7 +58,8 @@ const setup = () => {
 
     const hideArrow = () =>{
         var pijl = document.getElementById('pijl');
-        pijl.style.display = 'none';
+        pijl.setAttribute('visible', 'false');
+
     }
 
     const setArrow = (locatie1, locatie2) => {

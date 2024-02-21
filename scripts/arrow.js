@@ -8,17 +8,17 @@ const arrowData = [
         ]
     },
     {
-        name: "H6_1>FORUM",
+        name: "H6_1>forum",
         points: [
             2,0,1,   // xyz
-            0, 50, 50  // Rotation
+            0, 50, -50  // Rotation
         ]
     },
     {
         name: "H6_2>H6_1",
         points: [
             1.5,0,-3.5,   // xyz
-            0, 20, 70  // Rotation
+            0, 20, -70  // Rotation
         ]
     },
     {
