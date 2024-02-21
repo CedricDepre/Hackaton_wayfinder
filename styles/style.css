@@ -39,6 +39,6 @@ input[type=button], select {
     border: none;
 }
 
-label {
+label, p {
     color: #f3f1f1;
 }
