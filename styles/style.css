@@ -21,3 +21,12 @@ body {
     right: auto;
 
 }
+
+input[type=button], select {
+    padding: 8px;
+    margin: 4px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #f3f1f1;
+    border: none;
+}
