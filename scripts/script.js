@@ -59,7 +59,7 @@ const setup = () => {
 
     const hideArrow = () =>{
         var pijl = document.getElementById('pijl');
-        pijl.style.display = 'none';
+        pijl.setAttribute('visible', 'false');
     }
 
     const setArrow = (locatie1, locatie2) => {
