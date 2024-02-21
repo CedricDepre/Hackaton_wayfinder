@@ -59,7 +59,7 @@ const setup = () => {
 
     const hideArrow = () =>{
         var pijl = document.getElementById('pijl');
-        pijl.setAttribute('visible', 'false');
+        pijl.style.display = 'none';
     }
 
     const setArrow = (locatie1, locatie2) => {
@@ -123,12 +123,15 @@ AFRAME.registerComponent('zoom-controls', {
         let self = this;
         let sceneEl = document.querySelector("a-scene");
         self.camera = sceneEl.querySelector("#camera");
+        console.log('min: ', self.data.min);
+        console.log('max: ', self.data.max);
         window.addEventListener("wheel", event =>{
             let amount = Math.sign(event.deltaY)*5 ;
             let fov = Number(self.camera.getAttribute('camera').fov);
             let adjust = amount + fov;
             if(adjust < self.data.min) {adjust = self.data.min;}
             if (adjust > self.data.max) {adjust = self.data.max;}
+            console.log('zoom: ', adjust);
             self.camera.setAttribute('camera', 'fov', adjust);
         });
     }
