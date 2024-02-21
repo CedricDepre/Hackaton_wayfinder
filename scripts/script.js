@@ -22,8 +22,6 @@ const setup = () => {
     const padStart = () => {
         index = 0
         fotoKader.setAttribute("src","#" + pad[0])
-        setArrow(pad[0],pad[1])
-
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
         locatieSpan.textContent = locatieOption.textContent
     }
@@ -31,12 +29,6 @@ const setup = () => {
     const padVolgende = () => {
         if (index !== pad.length -1) {
             index++;
-            if(index !== pad.lenght -2){
-                setArrow(pad[index],pad[index+1])
-            }
-
-        }else{
-            hideArrow();
         }
         fotoKader.setAttribute("src","#" + pad[index])
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
@@ -46,38 +38,10 @@ const setup = () => {
     const padVorige = () => {
         if (index !== 0) {
             index--;
-            setArrow(pad[index],pad[index+1])
         }
         fotoKader.setAttribute("src","#" + pad[index])
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
         locatieSpan.textContent = locatieOption.textContent
-    }
-
-    const hideArrow = () =>{
-        var pijl = document.getElementById('pijl');
-        pijl.style.display = 'none';
-    }
-
-    const setArrow = (locatie1, locatie2) => {
-        var loc0 = locatie1.replace(".","_").replace("h","H")
-        var loc1 = locatie2.replace(".","_").replace("h","H")
-
-        var arrowDetails = getArrowDetails(loc0,loc1)
-
-        var pijl = document.getElementById('pijl');
-
-
-// De eerste drie waardes instellen als positie
-        var posX = arrowDetails[0];
-        var posY = arrowDetails[1];
-        var posZ = arrowDetails[2];
-        pijl.setAttribute('position', posX + ' ' + posY + ' ' + posZ);
-
-// De laatste drie waardes instellen als rotatie
-        var rotX = arrowDetails[3];
-        var rotY = arrowDetails[4];
-        var rotZ = arrowDetails[5];
-        pijl.setAttribute('rotation', rotX + ' ' + rotY + ' ' + rotZ);
     }
 
     let volgendeButton = document.getElementById("volgendeButton");
