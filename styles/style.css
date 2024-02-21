@@ -19,5 +19,9 @@ body {
     position: absolute;
     left: auto;
     right: auto;
+}
 
+/* Hide fullscreen button */
+.a-enter-vr.fullscreen {
+    display: none;
 }
