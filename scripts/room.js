@@ -57,7 +57,7 @@ const Room = {
 Room.setExits(Room.FORUM, Room.H6_1);
 Room.setExits(Room.H1_1, Room.H1_2, Room.H1_3, Room.H2_1);
 Room.setExits(Room.H1_2, Room.H1_1, Room.H1_3);
-Room.setExits(Room.H1_3, Room.H1_4, Room.H1_2, Room.H1_1);
+Room.setExits(Room.H1_3, Room.H1_4, Room.H1_3, Room.H1_1);
 Room.setExits(Room.H1_4, Room.H1_3);
 Room.setExits(Room.H2_1, Room.H2_2, Room.H1_1,  Room.H3_1, Room.H6_2);
 Room.setExits(Room.H2_2, Room.H2_1, Room.H2_3);
