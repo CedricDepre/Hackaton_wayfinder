@@ -65,4 +65,27 @@ const startPathFinding = () => {
     pad = ids
 }
 
+AFRAME.registerComponent('zoom-controls', {
+    schema:{
+        min:{type:"number", default: 20},
+        max: {type:"number", default: 80}
+    },
+    init: function(){
+        let self = this;
+        let sceneEl = document.querySelector("a-scene");
+        self.camera = sceneEl.querySelector("#camera");
+        console.log('min: ', self.data.min);
+        console.log('max: ', self.data.max);
+        window.addEventListener("wheel", event =>{
+            let amount = Math.sign(event.deltaY)*5 ;
+            let fov = Number(self.camera.getAttribute('camera').fov);
+            let adjust = amount + fov;
+            if(adjust < self.data.min) {adjust = self.data.min;}
+            if (adjust > self.data.max) {adjust = self.data.max;}
+            console.log('zoom: ', adjust);
+            self.camera.setAttribute('camera', 'fov', adjust);
+        });
+    }
+});
+
 window.addEventListener("load", setup);
