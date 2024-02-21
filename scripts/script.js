@@ -35,7 +35,7 @@ const setup = () => {
         if (index !== pad.length -1) {
             index++;
             if(index !== pad.lenght -2){
-                setArrow(pad[index],pad[index+1])
+                //setArrow(pad[index],pad[index+1])
             }
 
         }else{
@@ -49,7 +49,7 @@ const setup = () => {
     const padVorige = () => {
         if (index !== 0) {
             index--;
-            setArrow(pad[index],pad[index+1])
+            //setArrow(pad[index],pad[index+1])
         }
         fotoKader.setAttribute("src","#" + pad[index])
         locatieOption = document.querySelector(`option[value='${pad[index]}']`)
