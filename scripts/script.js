@@ -7,12 +7,19 @@ const setup = () => {
 
     let index = 0;
 
+    let progress = document.getElementById("progress")
+    progress.max = pad.length - 1
+
+
+
+
     const updateMenu = () => {
         menuChoice = document.getElementById("menu").value;
         fotoKader.setAttribute("src","#" + menuChoice)
     }
 
     const padStart = () => {
+        index = 0
         fotoKader.setAttribute("src","#" + pad[0])
     }
 
@@ -21,6 +28,7 @@ const setup = () => {
             index++;
         }
         fotoKader.setAttribute("src","#" + pad[index])
+        progress.value = index
     }
 
     const padVorige = () => {
@@ -28,6 +36,7 @@ const setup = () => {
             index--;
         }
         fotoKader.setAttribute("src","#" + pad[index])
+        progress.value = index
     }
 
     let volgendeButton = document.getElementById("volgendeButton");
