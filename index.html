@@ -7,14 +7,12 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/room.js"></script>
-    <script type="text/javascript" charset="utf-8" src="scripts/arrow.js"></script>
 </head>
 <body>
 <div>
     <a-scene class="test">
         <a-assets>
             <!-- Images. -->
-            <img id="arrow" src=./image/arrow2.webp alt="alt">
             <img id="h1.1" src=./image/h1.1.jpg alt="alt">
             <img id="h1.2" src=./image/h1.2.jpg alt="alt">
             <img id="h1.3" src=./image/h1.3.jpg alt="alt">
@@ -35,7 +33,6 @@
             <img id="h6.2" src=./image/h6.2.jpg alt="alt">
             <img id="forum" src=./image/forum.jpg alt="alt">
         </a-assets>
-        <a-image src="#arrow" width="2" height="2" position="-5 0 1" rotation="0 -90 0" id="pijl"></a-image>
 
         <!-- 360-degree image. -->
         <a-sky id="image-360" radius="10" src=#h1.1></a-sky>
@@ -64,13 +61,13 @@
         <option value="h4.3">H4 kant deli</option>
         <option class="hoofd" disabled>Hantal 5</option>
         <option value="h5.0">H5 gelijkvloers</option>
-        <option value="h5.1">H5 tweede verdiep</option>
-        <option value="h5.2">H5 derde verdiep</option>
+        <option value="h5.1">H5 eerste verdiep</option>
+        <option value="h5.2">H5 eerste verdiep eind</option>
         <option class="hoofd" disabled>Hantal 6</option>
         <option value="h6.1">H6 gang naar forum</option>
-        <option value="h6.2">H6 tweede verdiep</option>
-        <option class="hoofd" disabled>Forum</option>
-        <option value="forum">Forum midden</option>
+        <option value="h6.2">H6 trap</option>
+        <option class="hoofd">Forum</option>
+        <option value="forum">Forum</option>
     </select>
     <label for="naarButton">Naar:</label>
     <select id="naarButton">
@@ -93,13 +90,13 @@
         <option value="h4.3">H4 kant deli</option>
         <option class="hoofd" disabled>Hantal 5</option>
         <option value="h5.0">H5 gelijkvloers</option>
-        <option value="h5.1">H5 tweede verdiep</option>
-        <option value="h5.2">H5 derde verdiep</option>
-        <option cylass="hoofd" disabled>Hantal 6</option>
+        <option value="h5.1">H5 eerste verdiep</option>
+        <option value="h5.2">H5 eerste verdiep eind</option>
+        <option class="hoofd" disabled>Hantal 6</option>
         <option value="h6.1">H6 gang naar forum</option>
-        <option value="h6.2">H6 tweede verdiep</option>
+        <option value="h6.2">H6 trap</option>
         <option class="hoofd">Forum</option>
-        <option value="forum">Forum midden</option>
+        <option value="forum">Forum</option>
     </select>
     <input type="button" id="startButton" class="btn btn-primary" value="Start Pad">
     <input type="button" id="vorigeButton" value="<">
@@ -108,6 +105,5 @@
 </div>
 
 <script type="text/javascript" charset="utf-8" src="scripts/script.js"></script>
-
 </body>
 </html>
